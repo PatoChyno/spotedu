@@ -8,7 +8,7 @@ from collections import OrderedDict, deque
 def time(fn):
     """
     decorator, that adds extra parameter named as 'log_time' to the function's signature (default
-    False). If then log_time is set to True, function meassures and prints its name and time to the
+    False). If then log_time is set to True, function measures and prints its name and time to the
     terminal
     """
     import time as sys_time
@@ -75,7 +75,7 @@ from fib import memo
 @time
 def super_fast(n, forb):
     """
-    fastests (at least for now) solution of the rook excercise based on recursion. Memo decorator adds
+    fastest (at least for now) solution of the rook exercise based on recursion. Memo decorator adds
     caching capabilities, which speeds up computation dramatically
     """
     @memo
@@ -87,7 +87,7 @@ def super_fast(n, forb):
 
     return get_pos(n,frozenset(range(n)))
     
-#size of th board
+#size of the board
 n=8
 #forbid cca one half of the fields, pick them randomly
 forb={(randrange(n), randrange(n)) for i in range(n*n//2)}
