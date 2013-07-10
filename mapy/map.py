@@ -89,8 +89,6 @@ def dijkstra(graph, ver_start, ver_end):
     and returns list of (neighbour, distance) pairs.
 
     returns tuple (dist, path) where dist is optimal distance and path is sequence of vertices
-
-    the code is quite ugly and shouldn't be read by anyone!
     """
     #boundary and final have the following structure: {vertex: (distance, previous_vertex)} where
     #distance is the distance from node_start to vertex and previous_vertex is semi-last vertex on
@@ -112,13 +110,12 @@ def dijkstra(graph, ver_start, ver_end):
         if closest_ver == ver_end:
             break
     path=[ver_end]
-    while not ver_end is ver_start:
-        ver_end=final[ver_end][1]
-        print(ver_end)
-        path.append(ver_end)
+    iterator=ver_end
+    while not iterator is ver_start:
+        iterator=final[iterator][1]
+        path.append(iterator)
 
     return final[ver_end][0], path
-
 
 if __name__=="__main__":
     tree = ET.parse('map.osm')
