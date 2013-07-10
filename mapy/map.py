@@ -111,7 +111,7 @@ def dijkstra(graph, ver_start, ver_end):
             break
     path=[ver_end]
     iterator=ver_end
-    while not iterator is ver_start:
+    while not iterator == ver_start:
         iterator=final[iterator][1]
         path.append(iterator)
 
