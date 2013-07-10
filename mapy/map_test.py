@@ -26,7 +26,7 @@ class DijkstraTest(unittest.TestCase):
 
 
     def test_fixed_graph(self):
-        #TODO: nadefinovat fixny graf a skusit, ci dijkstra funguje
+        #TODO?: nadefinovat fixny graf a skusit, ci dijkstra funguje
         pass
 
     def test_not_connected(self):
@@ -51,7 +51,7 @@ class DijkstraTest(unittest.TestCase):
         self.assertLess(mean_distance,2.5)
 
 class ParsingTest(unittest.TestCase):
-    #TODO: overit, ci nam to uplne jednoduche xml s 5 nodmi (1,2,3,4,5) a 2 cestami (1-3-5, 2-3-4) sparsuje spravne
+    #TODO?: overit, ci nam to uplne jednoduche xml s 5 nodmi (1,2,3,4,5) a 2 cestami (1-3-5, 2-3-4) sparsuje spravne
 
 unittest.main()
 

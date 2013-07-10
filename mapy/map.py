@@ -26,6 +26,9 @@ class Node:
     def __repr__(self):
         return "Node(id=%s, way=%s)"%(self.id, ', '.join({way.name for way in self.ways if way.name!='unnamed'}))
 
+    def __str__(self):
+        return self.__repr__()
+
 class Way:
     def __init__(self, elem):
        self.nodes=set()
@@ -119,12 +122,12 @@ def dijkstra(graph, ver_start, ver_end):
 
 if __name__=="__main__":
     tree = ET.parse('map.osm')
-    way=tree.findall(".//way")[0]
 
     all_ways={Way(elem) for elem in tree.findall(".//way") if is_way(elem)
     all_nodes=#TODO: podobne ako all_ways chceme nacitat vsetky nody
     all_nodes_dict=#TODO; all_nodes_dicts je pomocna struktura, ktora mapuje node.id na prislusny
     #node object. zahrna vsetky nody z all_nodes
+    # {vertex: {(sused1, vzd1), (sused2, vzd2), ...}}
     graph_dict=defaultdict(set)
 
     for way in all_ways:
